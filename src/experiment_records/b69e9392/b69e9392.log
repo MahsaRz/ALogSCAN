@@ -1,0 +1,573 @@
+2024-08-16 16:09:44,076 P8264 INFO {
+    "framework": "SSD",
+    "hidden_size": 128,
+    "embedding_dim": 32,
+    "num_layers": 2,
+    "encoder_type": "cnn",
+    "reconstruction_mode": "global2local",
+    "masking_by": "frequency",
+    "masking_mode": "row_value_mask",
+    "masking_ratio": -1.0,
+    "session_level": "entry",
+    "loss_ablation": "all",
+    "alpha": 50.0,
+    "beta": 1.0,
+    "gamma": 1.0,
+    "kernel_sizes": [
+        2,
+        3,
+        4
+    ],
+    "decoder_type": "deconv",
+    "pooling_mode": "max",
+    "datasets": [
+        "bgl"
+    ],
+    "data_dir": "../data/processed/",
+    "session_size": 100,
+    "window_size": 100,
+    "stride": 100,
+    "without_duplicate": true,
+    "feature_type": "semantics",
+    "embedding_type": "tfidf",
+    "label_type": "none",
+    "pretrain_path": null,
+    "max_token_len": 50,
+    "min_token_count": 1,
+    "semi_supervised": true,
+    "no_validation": true,
+    "train_ratio": 0.8,
+    "sampling_size": 1.0,
+    "run_times": 3,
+    "epoches": 100,
+    "batch_size": 64,
+    "patience": 20,
+    "weight_decay": 0.0001,
+    "peak_lr": 0.01,
+    "end_lr": 0.0001,
+    "warmup_epoch": 0,
+    "show_statistics": false,
+    "random_seed": 42,
+    "gpu": 0,
+    "cache": false,
+    "dataset": "bgl",
+    "window_type": "sliding",
+    "eval_type": "session",
+    "hash_id": "b69e9392"
+}
+2024-08-16 16:09:44,093 P8264 INFO Start training on 64 batches with cpu.
+2024-08-16 16:09:59,749 P8264 INFO Epoch 1/100, training loss: 0.03588 [15.66s]
+2024-08-16 16:09:59,749 P8264 INFO Evaluating test data.
+2024-08-16 16:10:01,360 P8264 INFO Finish inference [1.61s]
+2024-08-16 16:10:05,348 P8264 INFO {'f1': '0.7650', 'rc': '0.6434', 'pc': '0.9432', 'prc': '0.8552', 'roc': '0.9745', 'apc': '0.8558', 'acc': '0.9593', 'mcc': '0.7599'}
+2024-08-16 16:10:05,348 P8264 INFO {'best anomaly ratio setting: 0.066'}
+2024-08-16 16:10:05,348 P8264 INFO Saving model to ./experiment_records\b69e9392\model.ckpt
+2024-08-16 16:10:20,946 P8264 INFO Epoch 2/100, training loss: 0.01111 [15.60s]
+2024-08-16 16:10:20,946 P8264 INFO Evaluating test data.
+2024-08-16 16:10:22,565 P8264 INFO Finish inference [1.62s]
+2024-08-16 16:10:26,701 P8264 INFO {'f1': '0.7391', 'rc': '0.6589', 'pc': '0.8416', 'prc': '0.8621', 'roc': '0.9794', 'apc': '0.8627', 'acc': '0.9522', 'mcc': '0.7197'}
+2024-08-16 16:10:26,702 P8264 INFO {'best anomaly ratio setting: 0.075'}
+2024-08-16 16:10:26,702 P8264 INFO 19 epoches left before early stop
+2024-08-16 16:10:42,051 P8264 INFO Epoch 3/100, training loss: 0.00650 [15.35s]
+2024-08-16 16:10:42,051 P8264 INFO Evaluating test data.
+2024-08-16 16:10:43,669 P8264 INFO Finish inference [1.62s]
+2024-08-16 16:10:47,793 P8264 INFO {'f1': '0.7464', 'rc': '0.9922', 'pc': '0.5981', 'prc': '0.8586', 'roc': '0.9791', 'apc': '0.8592', 'acc': '0.9306', 'mcc': '0.7395'}
+2024-08-16 16:10:47,793 P8264 INFO {'best anomaly ratio setting: 0.166'}
+2024-08-16 16:10:47,793 P8264 INFO 18 epoches left before early stop
+2024-08-16 16:11:05,191 P8264 INFO Epoch 4/100, training loss: 0.00688 [17.40s]
+2024-08-16 16:11:05,191 P8264 INFO Evaluating test data.
+2024-08-16 16:11:06,809 P8264 INFO Finish inference [1.62s]
+2024-08-16 16:11:10,801 P8264 INFO {'f1': '0.7913', 'rc': '0.7054', 'pc': '0.9010', 'prc': '0.8906', 'roc': '0.9847', 'apc': '0.8911', 'acc': '0.9617', 'mcc': '0.7776'}
+2024-08-16 16:11:10,801 P8264 INFO {'best anomaly ratio setting: 0.075'}
+2024-08-16 16:11:10,801 P8264 INFO Saving model to ./experiment_records\b69e9392\model.ckpt
+2024-08-16 16:11:27,097 P8264 INFO Epoch 5/100, training loss: 0.00918 [16.30s]
+2024-08-16 16:11:27,113 P8264 INFO Evaluating test data.
+2024-08-16 16:11:28,999 P8264 INFO Finish inference [1.89s]
+2024-08-16 16:11:32,987 P8264 INFO {'f1': '0.7769', 'rc': '0.7287', 'pc': '0.8319', 'prc': '0.8807', 'roc': '0.9831', 'apc': '0.8813', 'acc': '0.9569', 'mcc': '0.7552'}
+2024-08-16 16:11:32,987 P8264 INFO {'best anomaly ratio setting: 0.086'}
+2024-08-16 16:11:33,003 P8264 INFO 19 epoches left before early stop
+2024-08-16 16:11:48,903 P8264 INFO Epoch 6/100, training loss: 0.00515 [15.90s]
+2024-08-16 16:11:48,903 P8264 INFO Evaluating test data.
+2024-08-16 16:11:50,640 P8264 INFO Finish inference [1.74s]
+2024-08-16 16:11:54,685 P8264 INFO {'f1': '0.7636', 'rc': '0.9767', 'pc': '0.6269', 'prc': '0.8365', 'roc': '0.9758', 'apc': '0.8371', 'acc': '0.9378', 'mcc': '0.7536'}
+2024-08-16 16:11:54,685 P8264 INFO {'best anomaly ratio setting: 0.155'}
+2024-08-16 16:11:54,685 P8264 INFO 18 epoches left before early stop
+2024-08-16 16:12:10,400 P8264 INFO Epoch 7/100, training loss: 0.00560 [15.72s]
+2024-08-16 16:12:10,401 P8264 INFO Evaluating test data.
+2024-08-16 16:12:12,044 P8264 INFO Finish inference [1.64s]
+2024-08-16 16:12:16,081 P8264 INFO {'f1': '0.8182', 'rc': '0.7674', 'pc': '0.8761', 'prc': '0.9176', 'roc': '0.9891', 'apc': '0.9180', 'acc': '0.9649', 'mcc': '0.8010'}
+2024-08-16 16:12:16,081 P8264 INFO {'best anomaly ratio setting: 0.086'}
+2024-08-16 16:12:16,081 P8264 INFO Saving model to ./experiment_records\b69e9392\model.ckpt
+2024-08-16 16:12:31,965 P8264 INFO Epoch 8/100, training loss: 0.00679 [15.88s]
+2024-08-16 16:12:31,965 P8264 INFO Evaluating test data.
+2024-08-16 16:12:33,616 P8264 INFO Finish inference [1.65s]
+2024-08-16 16:12:38,088 P8264 INFO {'f1': '0.8435', 'rc': '0.7519', 'pc': '0.9604', 'prc': '0.9259', 'roc': '0.9908', 'apc': '0.9264', 'acc': '0.9713', 'mcc': '0.8354'}
+2024-08-16 16:12:38,088 P8264 INFO {'best anomaly ratio setting: 0.075'}
+2024-08-16 16:12:38,088 P8264 INFO Saving model to ./experiment_records\b69e9392\model.ckpt
+2024-08-16 16:12:53,670 P8264 INFO Epoch 9/100, training loss: 0.00394 [15.58s]
+2024-08-16 16:12:53,670 P8264 INFO Evaluating test data.
+2024-08-16 16:12:55,322 P8264 INFO Finish inference [1.65s]
+2024-08-16 16:12:59,260 P8264 INFO {'f1': '0.8174', 'rc': '0.7287', 'pc': '0.9307', 'prc': '0.8984', 'roc': '0.9854', 'apc': '0.8988', 'acc': '0.9665', 'mcc': '0.8065'}
+2024-08-16 16:12:59,260 P8264 INFO {'best anomaly ratio setting: 0.075'}
+2024-08-16 16:12:59,260 P8264 INFO 19 epoches left before early stop
+2024-08-16 16:13:15,393 P8264 INFO Epoch 10/100, training loss: 0.00304 [16.13s]
+2024-08-16 16:13:15,409 P8264 INFO Evaluating test data.
+2024-08-16 16:13:17,045 P8264 INFO Finish inference [1.64s]
+2024-08-16 16:13:20,998 P8264 INFO {'f1': '0.8435', 'rc': '0.7519', 'pc': '0.9604', 'prc': '0.9100', 'roc': '0.9872', 'apc': '0.9105', 'acc': '0.9713', 'mcc': '0.8354'}
+2024-08-16 16:13:20,998 P8264 INFO {'best anomaly ratio setting: 0.075'}
+2024-08-16 16:13:20,998 P8264 INFO 18 epoches left before early stop
+2024-08-16 16:13:38,019 P8264 INFO Epoch 11/100, training loss: 0.00238 [17.02s]
+2024-08-16 16:13:38,019 P8264 INFO Evaluating test data.
+2024-08-16 16:13:40,076 P8264 INFO Finish inference [2.06s]
+2024-08-16 16:13:44,172 P8264 INFO {'f1': '0.8347', 'rc': '0.7829', 'pc': '0.8938', 'prc': '0.9177', 'roc': '0.9887', 'apc': '0.9182', 'acc': '0.9681', 'mcc': '0.8193'}
+2024-08-16 16:13:44,172 P8264 INFO {'best anomaly ratio setting: 0.086'}
+2024-08-16 16:13:44,172 P8264 INFO 17 epoches left before early stop
+2024-08-16 16:13:59,933 P8264 INFO Epoch 12/100, training loss: 0.00350 [15.76s]
+2024-08-16 16:13:59,933 P8264 INFO Evaluating test data.
+2024-08-16 16:14:01,607 P8264 INFO Finish inference [1.67s]
+2024-08-16 16:14:05,511 P8264 INFO {'f1': '0.8595', 'rc': '0.8062', 'pc': '0.9204', 'prc': '0.9272', 'roc': '0.9901', 'apc': '0.9276', 'acc': '0.9729', 'mcc': '0.8468'}
+2024-08-16 16:14:05,527 P8264 INFO {'best anomaly ratio setting: 0.086'}
+2024-08-16 16:14:05,528 P8264 INFO Saving model to ./experiment_records\b69e9392\model.ckpt
+2024-08-16 16:14:22,871 P8264 INFO Epoch 13/100, training loss: 0.00166 [17.34s]
+2024-08-16 16:14:22,872 P8264 INFO Evaluating test data.
+2024-08-16 16:14:25,061 P8264 INFO Finish inference [2.19s]
+2024-08-16 16:14:29,335 P8264 INFO {'f1': '0.8471', 'rc': '0.8372', 'pc': '0.8571', 'prc': '0.9241', 'roc': '0.9896', 'apc': '0.9245', 'acc': '0.9689', 'mcc': '0.8298'}
+2024-08-16 16:14:29,335 P8264 INFO {'best anomaly ratio setting: 0.095'}
+2024-08-16 16:14:29,335 P8264 INFO 19 epoches left before early stop
+2024-08-16 16:14:46,053 P8264 INFO Epoch 14/100, training loss: 0.00112 [16.72s]
+2024-08-16 16:14:46,053 P8264 INFO Evaluating test data.
+2024-08-16 16:14:47,654 P8264 INFO Finish inference [1.60s]
+2024-08-16 16:14:51,508 P8264 INFO {'f1': '0.8689', 'rc': '0.8992', 'pc': '0.8406', 'prc': '0.9415', 'roc': '0.9930', 'apc': '0.9420', 'acc': '0.9721', 'mcc': '0.8539'}
+2024-08-16 16:14:51,508 P8264 INFO {'best anomaly ratio setting: 0.105'}
+2024-08-16 16:14:51,508 P8264 INFO Saving model to ./experiment_records\b69e9392\model.ckpt
+2024-08-16 16:15:07,891 P8264 INFO Epoch 15/100, training loss: 0.00262 [16.37s]
+2024-08-16 16:15:07,891 P8264 INFO Evaluating test data.
+2024-08-16 16:15:09,578 P8264 INFO Finish inference [1.69s]
+2024-08-16 16:15:13,810 P8264 INFO {'f1': '0.9020', 'rc': '0.8915', 'pc': '0.9127', 'prc': '0.9589', 'roc': '0.9958', 'apc': '0.9593', 'acc': '0.9801', 'mcc': '0.8909'}
+2024-08-16 16:15:13,811 P8264 INFO {'best anomaly ratio setting: 0.095'}
+2024-08-16 16:15:13,812 P8264 INFO Saving model to ./experiment_records\b69e9392\model.ckpt
+2024-08-16 16:15:31,708 P8264 INFO Epoch 16/100, training loss: 0.00139 [17.89s]
+2024-08-16 16:15:31,708 P8264 INFO Evaluating test data.
+2024-08-16 16:15:33,440 P8264 INFO Finish inference [1.73s]
+2024-08-16 16:15:38,325 P8264 INFO {'f1': '0.8512', 'rc': '0.7984', 'pc': '0.9115', 'prc': '0.9145', 'roc': '0.9887', 'apc': '0.9152', 'acc': '0.9713', 'mcc': '0.8377'}
+2024-08-16 16:15:38,325 P8264 INFO {'best anomaly ratio setting: 0.086'}
+2024-08-16 16:15:38,325 P8264 INFO 19 epoches left before early stop
+2024-08-16 16:15:55,493 P8264 INFO Epoch 17/100, training loss: 0.00157 [17.17s]
+2024-08-16 16:15:55,493 P8264 INFO Evaluating test data.
+2024-08-16 16:15:57,174 P8264 INFO Finish inference [1.67s]
+2024-08-16 16:16:01,212 P8264 INFO {'f1': '0.8941', 'rc': '0.8837', 'pc': '0.9048', 'prc': '0.9547', 'roc': '0.9954', 'apc': '0.9551', 'acc': '0.9785', 'mcc': '0.8822'}
+2024-08-16 16:16:01,212 P8264 INFO {'best anomaly ratio setting: 0.095'}
+2024-08-16 16:16:01,212 P8264 INFO 18 epoches left before early stop
+2024-08-16 16:16:16,995 P8264 INFO Epoch 18/100, training loss: 0.00185 [15.78s]
+2024-08-16 16:16:16,995 P8264 INFO Evaluating test data.
+2024-08-16 16:16:18,732 P8264 INFO Finish inference [1.74s]
+2024-08-16 16:16:22,701 P8264 INFO {'f1': '0.9438', 'rc': '0.9767', 'pc': '0.9130', 'prc': '0.9753', 'roc': '0.9975', 'apc': '0.9754', 'acc': '0.9880', 'mcc': '0.9378'}
+2024-08-16 16:16:22,701 P8264 INFO {'best anomaly ratio setting: 0.105'}
+2024-08-16 16:16:22,701 P8264 INFO Saving model to ./experiment_records\b69e9392\model.ckpt
+2024-08-16 16:16:39,789 P8264 INFO Epoch 19/100, training loss: 0.00091 [17.09s]
+2024-08-16 16:16:39,789 P8264 INFO Evaluating test data.
+2024-08-16 16:16:41,638 P8264 INFO Finish inference [1.85s]
+2024-08-16 16:16:45,827 P8264 INFO {'f1': '0.8767', 'rc': '0.9922', 'pc': '0.7853', 'prc': '0.9549', 'roc': '0.9950', 'apc': '0.9552', 'acc': '0.9713', 'mcc': '0.8683'}
+2024-08-16 16:16:45,827 P8264 INFO {'best anomaly ratio setting: 0.126'}
+2024-08-16 16:16:45,828 P8264 INFO 19 epoches left before early stop
+2024-08-16 16:17:02,491 P8264 INFO Epoch 20/100, training loss: 0.00088 [16.66s]
+2024-08-16 16:17:02,491 P8264 INFO Evaluating test data.
+2024-08-16 16:17:04,383 P8264 INFO Finish inference [1.89s]
+2024-08-16 16:17:08,657 P8264 INFO {'f1': '0.8926', 'rc': '0.8372', 'pc': '0.9558', 'prc': '0.9325', 'roc': '0.9915', 'apc': '0.9333', 'acc': '0.9793', 'mcc': '0.8835'}
+2024-08-16 16:17:08,657 P8264 INFO {'best anomaly ratio setting: 0.086'}
+2024-08-16 16:17:08,659 P8264 INFO 18 epoches left before early stop
+2024-08-16 16:17:24,696 P8264 INFO Epoch 21/100, training loss: 0.00053 [16.04s]
+2024-08-16 16:17:24,697 P8264 INFO Evaluating test data.
+2024-08-16 16:17:26,416 P8264 INFO Finish inference [1.72s]
+2024-08-16 16:17:30,453 P8264 INFO {'f1': '0.8348', 'rc': '0.7442', 'pc': '0.9505', 'prc': '0.9022', 'roc': '0.9862', 'apc': '0.9030', 'acc': '0.9697', 'mcc': '0.8258'}
+2024-08-16 16:17:30,453 P8264 INFO {'best anomaly ratio setting: 0.075'}
+2024-08-16 16:17:30,453 P8264 INFO 17 epoches left before early stop
+2024-08-16 16:17:47,354 P8264 INFO Epoch 22/100, training loss: 0.00052 [16.90s]
+2024-08-16 16:17:47,354 P8264 INFO Evaluating test data.
+2024-08-16 16:17:49,328 P8264 INFO Finish inference [1.97s]
+2024-08-16 16:17:53,720 P8264 INFO {'f1': '0.8348', 'rc': '0.7442', 'pc': '0.9505', 'prc': '0.9236', 'roc': '0.9898', 'apc': '0.9241', 'acc': '0.9697', 'mcc': '0.8258'}
+2024-08-16 16:17:53,721 P8264 INFO {'best anomaly ratio setting: 0.075'}
+2024-08-16 16:17:53,723 P8264 INFO 16 epoches left before early stop
+2024-08-16 16:18:10,127 P8264 INFO Epoch 23/100, training loss: 0.00063 [16.40s]
+2024-08-16 16:18:10,136 P8264 INFO Evaluating test data.
+2024-08-16 16:18:11,962 P8264 INFO Finish inference [1.83s]
+2024-08-16 16:18:15,898 P8264 INFO {'f1': '0.8760', 'rc': '0.8217', 'pc': '0.9381', 'prc': '0.9376', 'roc': '0.9912', 'apc': '0.9379', 'acc': '0.9761', 'mcc': '0.8652'}
+2024-08-16 16:18:15,899 P8264 INFO {'best anomaly ratio setting: 0.086'}
+2024-08-16 16:18:15,902 P8264 INFO 15 epoches left before early stop
+2024-08-16 16:18:32,291 P8264 INFO Epoch 24/100, training loss: 0.00033 [16.39s]
+2024-08-16 16:18:32,291 P8264 INFO Evaluating test data.
+2024-08-16 16:18:33,984 P8264 INFO Finish inference [1.69s]
+2024-08-16 16:18:38,161 P8264 INFO {'f1': '0.9008', 'rc': '0.8450', 'pc': '0.9646', 'prc': '0.9579', 'roc': '0.9951', 'apc': '0.9576', 'acc': '0.9809', 'mcc': '0.8927'}
+2024-08-16 16:18:38,161 P8264 INFO {'best anomaly ratio setting: 0.086'}
+2024-08-16 16:18:38,165 P8264 INFO 14 epoches left before early stop
+2024-08-16 16:18:54,588 P8264 INFO Epoch 25/100, training loss: 0.00033 [16.42s]
+2024-08-16 16:18:54,588 P8264 INFO Evaluating test data.
+2024-08-16 16:18:56,290 P8264 INFO Finish inference [1.70s]
+2024-08-16 16:19:00,261 P8264 INFO {'f1': '0.8595', 'rc': '0.8062', 'pc': '0.9204', 'prc': '0.9244', 'roc': '0.9890', 'apc': '0.9242', 'acc': '0.9729', 'mcc': '0.8468'}
+2024-08-16 16:19:00,261 P8264 INFO {'best anomaly ratio setting: 0.086'}
+2024-08-16 16:19:00,261 P8264 INFO 13 epoches left before early stop
+2024-08-16 16:19:16,994 P8264 INFO Epoch 26/100, training loss: 0.00041 [16.73s]
+2024-08-16 16:19:16,994 P8264 INFO Evaluating test data.
+2024-08-16 16:19:18,646 P8264 INFO Finish inference [1.65s]
+2024-08-16 16:19:22,600 P8264 INFO {'f1': '0.8347', 'rc': '0.7829', 'pc': '0.8938', 'prc': '0.9062', 'roc': '0.9861', 'apc': '0.9066', 'acc': '0.9681', 'mcc': '0.8193'}
+2024-08-16 16:19:22,600 P8264 INFO {'best anomaly ratio setting: 0.086'}
+2024-08-16 16:19:22,600 P8264 INFO 12 epoches left before early stop
+2024-08-16 16:19:38,349 P8264 INFO Epoch 27/100, training loss: 0.00023 [15.75s]
+2024-08-16 16:19:38,349 P8264 INFO Evaluating test data.
+2024-08-16 16:19:40,051 P8264 INFO Finish inference [1.70s]
+2024-08-16 16:19:43,971 P8264 INFO {'f1': '0.7697', 'rc': '0.9845', 'pc': '0.6318', 'prc': '0.8619', 'roc': '0.9795', 'apc': '0.8625', 'acc': '0.9394', 'mcc': '0.7607'}
+2024-08-16 16:19:43,971 P8264 INFO {'best anomaly ratio setting: 0.155'}
+2024-08-16 16:19:43,988 P8264 INFO 11 epoches left before early stop
+2024-08-16 16:19:59,777 P8264 INFO Epoch 28/100, training loss: 0.00026 [15.79s]
+2024-08-16 16:19:59,777 P8264 INFO Evaluating test data.
+2024-08-16 16:20:01,523 P8264 INFO Finish inference [1.74s]
+2024-08-16 16:20:05,410 P8264 INFO {'f1': '0.8512', 'rc': '0.7984', 'pc': '0.9115', 'prc': '0.9118', 'roc': '0.9870', 'apc': '0.9123', 'acc': '0.9713', 'mcc': '0.8377'}
+2024-08-16 16:20:05,410 P8264 INFO {'best anomaly ratio setting: 0.086'}
+2024-08-16 16:20:05,410 P8264 INFO 10 epoches left before early stop
+2024-08-16 16:20:21,042 P8264 INFO Epoch 29/100, training loss: 0.00019 [15.63s]
+2024-08-16 16:20:21,042 P8264 INFO Evaluating test data.
+2024-08-16 16:20:22,677 P8264 INFO Finish inference [1.63s]
+2024-08-16 16:20:26,665 P8264 INFO {'f1': '0.7834', 'rc': '0.6589', 'pc': '0.9659', 'prc': '0.8671', 'roc': '0.9805', 'apc': '0.8678', 'acc': '0.9625', 'mcc': '0.7805'}
+2024-08-16 16:20:26,665 P8264 INFO {'best anomaly ratio setting: 0.066'}
+2024-08-16 16:20:26,665 P8264 INFO 9 epoches left before early stop
+2024-08-16 16:20:42,681 P8264 INFO Epoch 30/100, training loss: 0.00017 [16.02s]
+2024-08-16 16:20:42,681 P8264 INFO Evaluating test data.
+2024-08-16 16:20:44,349 P8264 INFO Finish inference [1.67s]
+2024-08-16 16:20:48,220 P8264 INFO {'f1': '0.7926', 'rc': '0.6667', 'pc': '0.9773', 'prc': '0.8880', 'roc': '0.9834', 'apc': '0.8885', 'acc': '0.9641', 'mcc': '0.7907'}
+2024-08-16 16:20:48,220 P8264 INFO {'best anomaly ratio setting: 0.066'}
+2024-08-16 16:20:48,220 P8264 INFO 8 epoches left before early stop
+2024-08-16 16:21:03,684 P8264 INFO Epoch 31/100, training loss: 0.00042 [15.46s]
+2024-08-16 16:21:03,685 P8264 INFO Evaluating test data.
+2024-08-16 16:21:05,354 P8264 INFO Finish inference [1.67s]
+2024-08-16 16:21:09,158 P8264 INFO {'f1': '0.8609', 'rc': '0.7674', 'pc': '0.9802', 'prc': '0.9137', 'roc': '0.9870', 'apc': '0.9141', 'acc': '0.9745', 'mcc': '0.8547'}
+2024-08-16 16:21:09,158 P8264 INFO {'best anomaly ratio setting: 0.075'}
+2024-08-16 16:21:09,158 P8264 INFO 7 epoches left before early stop
+2024-08-16 16:21:24,824 P8264 INFO Epoch 32/100, training loss: 0.00018 [15.67s]
+2024-08-16 16:21:24,824 P8264 INFO Evaluating test data.
+2024-08-16 16:21:26,392 P8264 INFO Finish inference [1.55s]
+2024-08-16 16:21:30,229 P8264 INFO {'f1': '0.9438', 'rc': '0.9767', 'pc': '0.9130', 'prc': '0.9759', 'roc': '0.9973', 'apc': '0.9761', 'acc': '0.9880', 'mcc': '0.9378'}
+2024-08-16 16:21:30,229 P8264 INFO {'best anomaly ratio setting: 0.105'}
+2024-08-16 16:21:30,229 P8264 INFO 6 epoches left before early stop
+2024-08-16 16:21:45,694 P8264 INFO Epoch 33/100, training loss: 0.00021 [15.47s]
+2024-08-16 16:21:45,694 P8264 INFO Evaluating test data.
+2024-08-16 16:21:47,362 P8264 INFO Finish inference [1.67s]
+2024-08-16 16:21:51,367 P8264 INFO {'f1': '0.8264', 'rc': '0.7752', 'pc': '0.8850', 'prc': '0.9221', 'roc': '0.9894', 'apc': '0.9226', 'acc': '0.9665', 'mcc': '0.8102'}
+2024-08-16 16:21:51,367 P8264 INFO {'best anomaly ratio setting: 0.086'}
+2024-08-16 16:21:51,367 P8264 INFO 5 epoches left before early stop
+2024-08-16 16:22:07,049 P8264 INFO Epoch 34/100, training loss: 0.00022 [15.68s]
+2024-08-16 16:22:07,049 P8264 INFO Evaluating test data.
+2024-08-16 16:22:08,751 P8264 INFO Finish inference [1.70s]
+2024-08-16 16:22:12,555 P8264 INFO {'f1': '0.8863', 'rc': '0.8760', 'pc': '0.8968', 'prc': '0.9563', 'roc': '0.9949', 'apc': '0.9566', 'acc': '0.9769', 'mcc': '0.8735'}
+2024-08-16 16:22:12,555 P8264 INFO {'best anomaly ratio setting: 0.095'}
+2024-08-16 16:22:12,555 P8264 INFO 4 epoches left before early stop
+2024-08-16 16:22:27,987 P8264 INFO Epoch 35/100, training loss: 0.00014 [15.43s]
+2024-08-16 16:22:27,987 P8264 INFO Evaluating test data.
+2024-08-16 16:22:29,732 P8264 INFO Finish inference [1.75s]
+2024-08-16 16:22:33,576 P8264 INFO {'f1': '0.9176', 'rc': '0.9070', 'pc': '0.9286', 'prc': '0.9517', 'roc': '0.9935', 'apc': '0.9521', 'acc': '0.9833', 'mcc': '0.9084'}
+2024-08-16 16:22:33,576 P8264 INFO {'best anomaly ratio setting: 0.095'}
+2024-08-16 16:22:33,576 P8264 INFO 3 epoches left before early stop
+2024-08-16 16:22:49,125 P8264 INFO Epoch 36/100, training loss: 0.00014 [15.55s]
+2024-08-16 16:22:49,125 P8264 INFO Evaluating test data.
+2024-08-16 16:22:50,793 P8264 INFO Finish inference [1.67s]
+2024-08-16 16:22:54,764 P8264 INFO {'f1': '0.8929', 'rc': '0.9690', 'pc': '0.8278', 'prc': '0.9633', 'roc': '0.9957', 'apc': '0.9636', 'acc': '0.9761', 'mcc': '0.8829'}
+2024-08-16 16:22:54,764 P8264 INFO {'best anomaly ratio setting: 0.115'}
+2024-08-16 16:22:54,764 P8264 INFO 2 epoches left before early stop
+2024-08-16 16:23:10,380 P8264 INFO Epoch 37/100, training loss: 0.00015 [15.62s]
+2024-08-16 16:23:10,380 P8264 INFO Evaluating test data.
+2024-08-16 16:23:12,065 P8264 INFO Finish inference [1.68s]
+2024-08-16 16:23:15,885 P8264 INFO {'f1': '0.9255', 'rc': '0.9147', 'pc': '0.9365', 'prc': '0.9620', 'roc': '0.9959', 'apc': '0.9625', 'acc': '0.9848', 'mcc': '0.9171'}
+2024-08-16 16:23:15,885 P8264 INFO {'best anomaly ratio setting: 0.095'}
+2024-08-16 16:23:15,885 P8264 INFO 1 epoches left before early stop
+2024-08-16 16:23:31,634 P8264 INFO Epoch 38/100, training loss: 0.00040 [15.75s]
+2024-08-16 16:23:31,634 P8264 INFO Evaluating test data.
+2024-08-16 16:23:33,319 P8264 INFO Finish inference [1.69s]
+2024-08-16 16:23:37,240 P8264 INFO {'f1': '0.9020', 'rc': '0.8915', 'pc': '0.9127', 'prc': '0.9551', 'roc': '0.9946', 'apc': '0.9554', 'acc': '0.9801', 'mcc': '0.8909'}
+2024-08-16 16:23:37,240 P8264 INFO {'best anomaly ratio setting: 0.095'}
+2024-08-16 16:23:37,257 P8264 INFO 0 epoches left before early stop
+2024-08-16 16:23:37,257 P8264 INFO Early stop at epoch: 38
+2024-08-16 16:23:37,257 P8264 INFO Start training on 64 batches with cpu.
+2024-08-16 16:23:52,939 P8264 INFO Epoch 1/100, training loss: 0.04073 [15.68s]
+2024-08-16 16:23:52,939 P8264 INFO Evaluating test data.
+2024-08-16 16:23:54,575 P8264 INFO Finish inference [1.64s]
+2024-08-16 16:23:58,395 P8264 INFO {'f1': '0.8230', 'rc': '0.7752', 'pc': '0.8772', 'prc': '0.8907', 'roc': '0.9840', 'apc': '0.8913', 'acc': '0.9657', 'mcc': '0.8060'}
+2024-08-16 16:23:58,395 P8264 INFO {'best anomaly ratio setting: 0.095'}
+2024-08-16 16:23:58,395 P8264 INFO Saving model to ./experiment_records\b69e9392\model.ckpt
+2024-08-16 16:24:14,461 P8264 INFO Epoch 2/100, training loss: 0.01011 [16.07s]
+2024-08-16 16:24:14,461 P8264 INFO Evaluating test data.
+2024-08-16 16:24:16,079 P8264 INFO Finish inference [1.62s]
+2024-08-16 16:24:20,000 P8264 INFO {'f1': '0.8706', 'rc': '0.8605', 'pc': '0.8810', 'prc': '0.9247', 'roc': '0.9904', 'apc': '0.9254', 'acc': '0.9737', 'mcc': '0.8560'}
+2024-08-16 16:24:20,000 P8264 INFO {'best anomaly ratio setting: 0.095'}
+2024-08-16 16:24:20,015 P8264 INFO Saving model to ./experiment_records\b69e9392\model.ckpt
+2024-08-16 16:24:35,599 P8264 INFO Epoch 3/100, training loss: 0.00524 [15.58s]
+2024-08-16 16:24:35,599 P8264 INFO Evaluating test data.
+2024-08-16 16:24:37,267 P8264 INFO Finish inference [1.67s]
+2024-08-16 16:24:41,238 P8264 INFO {'f1': '0.8595', 'rc': '0.8062', 'pc': '0.9204', 'prc': '0.9062', 'roc': '0.9881', 'apc': '0.9074', 'acc': '0.9729', 'mcc': '0.8468'}
+2024-08-16 16:24:41,238 P8264 INFO {'best anomaly ratio setting: 0.086'}
+2024-08-16 16:24:41,238 P8264 INFO 19 epoches left before early stop
+2024-08-16 16:24:56,987 P8264 INFO Epoch 4/100, training loss: 0.00478 [15.75s]
+2024-08-16 16:24:56,987 P8264 INFO Evaluating test data.
+2024-08-16 16:24:58,589 P8264 INFO Finish inference [1.60s]
+2024-08-16 16:25:02,543 P8264 INFO {'f1': '0.8678', 'rc': '0.8140', 'pc': '0.9292', 'prc': '0.9185', 'roc': '0.9897', 'apc': '0.9191', 'acc': '0.9745', 'mcc': '0.8560'}
+2024-08-16 16:25:02,543 P8264 INFO {'best anomaly ratio setting: 0.086'}
+2024-08-16 16:25:02,543 P8264 INFO 18 epoches left before early stop
+2024-08-16 16:25:18,158 P8264 INFO Epoch 5/100, training loss: 0.00372 [15.62s]
+2024-08-16 16:25:18,158 P8264 INFO Evaluating test data.
+2024-08-16 16:25:19,922 P8264 INFO Finish inference [1.76s]
+2024-08-16 16:25:23,814 P8264 INFO {'f1': '0.8435', 'rc': '0.7519', 'pc': '0.9604', 'prc': '0.9039', 'roc': '0.9868', 'apc': '0.9044', 'acc': '0.9713', 'mcc': '0.8354'}
+2024-08-16 16:25:23,814 P8264 INFO {'best anomaly ratio setting: 0.075'}
+2024-08-16 16:25:23,814 P8264 INFO 17 epoches left before early stop
+2024-08-16 16:25:39,213 P8264 INFO Epoch 6/100, training loss: 0.00467 [15.40s]
+2024-08-16 16:25:39,213 P8264 INFO Evaluating test data.
+2024-08-16 16:25:41,015 P8264 INFO Finish inference [1.80s]
+2024-08-16 16:25:44,885 P8264 INFO {'f1': '0.8435', 'rc': '0.7519', 'pc': '0.9604', 'prc': '0.9034', 'roc': '0.9875', 'apc': '0.9044', 'acc': '0.9713', 'mcc': '0.8354'}
+2024-08-16 16:25:44,885 P8264 INFO {'best anomaly ratio setting: 0.075'}
+2024-08-16 16:25:44,885 P8264 INFO 16 epoches left before early stop
+2024-08-16 16:26:00,468 P8264 INFO Epoch 7/100, training loss: 0.00312 [15.58s]
+2024-08-16 16:26:00,468 P8264 INFO Evaluating test data.
+2024-08-16 16:26:02,186 P8264 INFO Finish inference [1.72s]
+2024-08-16 16:26:06,089 P8264 INFO {'f1': '0.8595', 'rc': '0.8062', 'pc': '0.9204', 'prc': '0.9119', 'roc': '0.9883', 'apc': '0.9126', 'acc': '0.9729', 'mcc': '0.8468'}
+2024-08-16 16:26:06,090 P8264 INFO {'best anomaly ratio setting: 0.086'}
+2024-08-16 16:26:06,090 P8264 INFO 15 epoches left before early stop
+2024-08-16 16:26:21,506 P8264 INFO Epoch 8/100, training loss: 0.00337 [15.42s]
+2024-08-16 16:26:21,506 P8264 INFO Evaluating test data.
+2024-08-16 16:26:23,174 P8264 INFO Finish inference [1.67s]
+2024-08-16 16:26:27,061 P8264 INFO {'f1': '0.8435', 'rc': '0.7519', 'pc': '0.9604', 'prc': '0.9111', 'roc': '0.9879', 'apc': '0.9117', 'acc': '0.9713', 'mcc': '0.8354'}
+2024-08-16 16:26:27,061 P8264 INFO {'best anomaly ratio setting: 0.075'}
+2024-08-16 16:26:27,061 P8264 INFO 14 epoches left before early stop
+2024-08-16 16:26:42,477 P8264 INFO Epoch 9/100, training loss: 0.00185 [15.42s]
+2024-08-16 16:26:42,477 P8264 INFO Evaluating test data.
+2024-08-16 16:26:44,078 P8264 INFO Finish inference [1.60s]
+2024-08-16 16:26:47,949 P8264 INFO {'f1': '0.7826', 'rc': '0.6977', 'pc': '0.8911', 'prc': '0.8768', 'roc': '0.9821', 'apc': '0.8774', 'acc': '0.9601', 'mcc': '0.7679'}
+2024-08-16 16:26:47,949 P8264 INFO {'best anomaly ratio setting: 0.075'}
+2024-08-16 16:26:47,965 P8264 INFO 13 epoches left before early stop
+2024-08-16 16:27:03,398 P8264 INFO Epoch 10/100, training loss: 0.00356 [15.43s]
+2024-08-16 16:27:03,398 P8264 INFO Evaluating test data.
+2024-08-16 16:27:05,016 P8264 INFO Finish inference [1.62s]
+2024-08-16 16:27:08,920 P8264 INFO {'f1': '0.7913', 'rc': '0.7054', 'pc': '0.9010', 'prc': '0.8770', 'roc': '0.9817', 'apc': '0.8775', 'acc': '0.9617', 'mcc': '0.7776'}
+2024-08-16 16:27:08,920 P8264 INFO {'best anomaly ratio setting: 0.075'}
+2024-08-16 16:27:08,920 P8264 INFO 12 epoches left before early stop
+2024-08-16 16:27:24,302 P8264 INFO Epoch 11/100, training loss: 0.00231 [15.38s]
+2024-08-16 16:27:24,302 P8264 INFO Evaluating test data.
+2024-08-16 16:27:25,970 P8264 INFO Finish inference [1.67s]
+2024-08-16 16:27:29,858 P8264 INFO {'f1': '0.7934', 'rc': '0.7442', 'pc': '0.8496', 'prc': '0.8846', 'roc': '0.9830', 'apc': '0.8851', 'acc': '0.9601', 'mcc': '0.7735'}
+2024-08-16 16:27:29,858 P8264 INFO {'best anomaly ratio setting: 0.086'}
+2024-08-16 16:27:29,862 P8264 INFO 11 epoches left before early stop
+2024-08-16 16:27:45,390 P8264 INFO Epoch 12/100, training loss: 0.00275 [15.53s]
+2024-08-16 16:27:45,390 P8264 INFO Evaluating test data.
+2024-08-16 16:27:47,108 P8264 INFO Finish inference [1.72s]
+2024-08-16 16:27:51,062 P8264 INFO {'f1': '0.8099', 'rc': '0.7597', 'pc': '0.8673', 'prc': '0.8912', 'roc': '0.9834', 'apc': '0.8916', 'acc': '0.9633', 'mcc': '0.7918'}
+2024-08-16 16:27:51,062 P8264 INFO {'best anomaly ratio setting: 0.086'}
+2024-08-16 16:27:51,062 P8264 INFO 10 epoches left before early stop
+2024-08-16 16:28:06,678 P8264 INFO Epoch 13/100, training loss: 0.00381 [15.62s]
+2024-08-16 16:28:06,678 P8264 INFO Evaluating test data.
+2024-08-16 16:28:08,280 P8264 INFO Finish inference [1.60s]
+2024-08-16 16:28:12,301 P8264 INFO {'f1': '0.7826', 'rc': '0.6977', 'pc': '0.8911', 'prc': '0.8679', 'roc': '0.9801', 'apc': '0.8685', 'acc': '0.9601', 'mcc': '0.7679'}
+2024-08-16 16:28:12,301 P8264 INFO {'best anomaly ratio setting: 0.075'}
+2024-08-16 16:28:12,301 P8264 INFO 9 epoches left before early stop
+2024-08-16 16:28:27,867 P8264 INFO Epoch 14/100, training loss: 0.00275 [15.57s]
+2024-08-16 16:28:27,867 P8264 INFO Evaluating test data.
+2024-08-16 16:28:29,502 P8264 INFO Finish inference [1.64s]
+2024-08-16 16:28:33,423 P8264 INFO {'f1': '0.7913', 'rc': '0.7054', 'pc': '0.9010', 'prc': '0.8736', 'roc': '0.9809', 'apc': '0.8741', 'acc': '0.9617', 'mcc': '0.7776'}
+2024-08-16 16:28:33,438 P8264 INFO {'best anomaly ratio setting: 0.075'}
+2024-08-16 16:28:33,439 P8264 INFO 8 epoches left before early stop
+2024-08-16 16:28:48,839 P8264 INFO Epoch 15/100, training loss: 0.00207 [15.40s]
+2024-08-16 16:28:48,839 P8264 INFO Evaluating test data.
+2024-08-16 16:28:50,440 P8264 INFO Finish inference [1.59s]
+2024-08-16 16:28:54,311 P8264 INFO {'f1': '0.7826', 'rc': '0.6977', 'pc': '0.8911', 'prc': '0.8747', 'roc': '0.9811', 'apc': '0.8752', 'acc': '0.9601', 'mcc': '0.7679'}
+2024-08-16 16:28:54,311 P8264 INFO {'best anomaly ratio setting: 0.075'}
+2024-08-16 16:28:54,311 P8264 INFO 7 epoches left before early stop
+2024-08-16 16:29:09,794 P8264 INFO Epoch 16/100, training loss: 0.00100 [15.48s]
+2024-08-16 16:29:09,794 P8264 INFO Evaluating test data.
+2024-08-16 16:29:11,462 P8264 INFO Finish inference [1.67s]
+2024-08-16 16:29:15,383 P8264 INFO {'f1': '0.7934', 'rc': '0.7442', 'pc': '0.8496', 'prc': '0.8797', 'roc': '0.9817', 'apc': '0.8802', 'acc': '0.9601', 'mcc': '0.7735'}
+2024-08-16 16:29:15,383 P8264 INFO {'best anomaly ratio setting: 0.086'}
+2024-08-16 16:29:15,383 P8264 INFO 6 epoches left before early stop
+2024-08-16 16:29:30,808 P8264 INFO Epoch 17/100, training loss: 0.00265 [15.42s]
+2024-08-16 16:29:30,809 P8264 INFO Evaluating test data.
+2024-08-16 16:29:32,217 P8264 INFO Finish inference [1.41s]
+2024-08-16 16:29:36,167 P8264 INFO {'f1': '0.7576', 'rc': '0.9690', 'pc': '0.6219', 'prc': '0.8446', 'roc': '0.9764', 'apc': '0.8451', 'acc': '0.9362', 'mcc': '0.7464'}
+2024-08-16 16:29:36,167 P8264 INFO {'best anomaly ratio setting: 0.155'}
+2024-08-16 16:29:36,169 P8264 INFO 5 epoches left before early stop
+2024-08-16 16:29:49,959 P8264 INFO Epoch 18/100, training loss: 0.00108 [13.78s]
+2024-08-16 16:29:49,960 P8264 INFO Evaluating test data.
+2024-08-16 16:29:51,513 P8264 INFO Finish inference [1.53s]
+2024-08-16 16:29:55,376 P8264 INFO {'f1': '0.7576', 'rc': '0.9690', 'pc': '0.6219', 'prc': '0.8460', 'roc': '0.9764', 'apc': '0.8466', 'acc': '0.9362', 'mcc': '0.7464'}
+2024-08-16 16:29:55,376 P8264 INFO {'best anomaly ratio setting: 0.155'}
+2024-08-16 16:29:55,378 P8264 INFO 4 epoches left before early stop
+2024-08-16 16:30:09,057 P8264 INFO Epoch 19/100, training loss: 0.00060 [13.67s]
+2024-08-16 16:30:09,057 P8264 INFO Evaluating test data.
+2024-08-16 16:30:10,570 P8264 INFO Finish inference [1.50s]
+2024-08-16 16:30:14,440 P8264 INFO {'f1': '0.7576', 'rc': '0.9690', 'pc': '0.6219', 'prc': '0.8209', 'roc': '0.9727', 'apc': '0.8215', 'acc': '0.9362', 'mcc': '0.7464'}
+2024-08-16 16:30:14,440 P8264 INFO {'best anomaly ratio setting: 0.155'}
+2024-08-16 16:30:14,442 P8264 INFO 3 epoches left before early stop
+2024-08-16 16:30:28,320 P8264 INFO Epoch 20/100, training loss: 0.00101 [13.86s]
+2024-08-16 16:30:28,320 P8264 INFO Evaluating test data.
+2024-08-16 16:30:29,848 P8264 INFO Finish inference [1.51s]
+2024-08-16 16:30:33,714 P8264 INFO {'f1': '0.7652', 'rc': '0.6822', 'pc': '0.8713', 'prc': '0.8635', 'roc': '0.9791', 'apc': '0.8640', 'acc': '0.9569', 'mcc': '0.7486'}
+2024-08-16 16:30:33,715 P8264 INFO {'best anomaly ratio setting: 0.075'}
+2024-08-16 16:30:33,716 P8264 INFO 2 epoches left before early stop
+2024-08-16 16:30:47,201 P8264 INFO Epoch 21/100, training loss: 0.00105 [13.47s]
+2024-08-16 16:30:47,201 P8264 INFO Evaluating test data.
+2024-08-16 16:30:48,687 P8264 INFO Finish inference [1.47s]
+2024-08-16 16:30:52,565 P8264 INFO {'f1': '0.7576', 'rc': '0.9690', 'pc': '0.6219', 'prc': '0.8209', 'roc': '0.9732', 'apc': '0.8216', 'acc': '0.9362', 'mcc': '0.7464'}
+2024-08-16 16:30:52,565 P8264 INFO {'best anomaly ratio setting: 0.155'}
+2024-08-16 16:30:52,567 P8264 INFO 1 epoches left before early stop
+2024-08-16 16:31:06,214 P8264 INFO Epoch 22/100, training loss: 0.00067 [13.63s]
+2024-08-16 16:31:06,214 P8264 INFO Evaluating test data.
+2024-08-16 16:31:07,674 P8264 INFO Finish inference [1.44s]
+2024-08-16 16:31:11,566 P8264 INFO {'f1': '0.7538', 'rc': '0.9612', 'pc': '0.6200', 'prc': '0.8209', 'roc': '0.9732', 'apc': '0.8217', 'acc': '0.9354', 'mcc': '0.7415'}
+2024-08-16 16:31:11,567 P8264 INFO {'best anomaly ratio setting: 0.155'}
+2024-08-16 16:31:11,584 P8264 INFO 0 epoches left before early stop
+2024-08-16 16:31:11,584 P8264 INFO Early stop at epoch: 22
+2024-08-16 16:31:11,592 P8264 INFO Start training on 64 batches with cpu.
+2024-08-16 16:31:25,478 P8264 INFO Epoch 1/100, training loss: 0.03782 [13.88s]
+2024-08-16 16:31:25,479 P8264 INFO Evaluating test data.
+2024-08-16 16:31:27,050 P8264 INFO Finish inference [1.57s]
+2024-08-16 16:31:30,927 P8264 INFO {'f1': '0.7834', 'rc': '0.6589', 'pc': '0.9659', 'prc': '0.8868', 'roc': '0.9837', 'apc': '0.8875', 'acc': '0.9625', 'mcc': '0.7805'}
+2024-08-16 16:31:30,927 P8264 INFO {'best anomaly ratio setting: 0.066'}
+2024-08-16 16:31:30,944 P8264 INFO Saving model to ./experiment_records\b69e9392\model.ckpt
+2024-08-16 16:31:44,664 P8264 INFO Epoch 2/100, training loss: 0.01202 [13.72s]
+2024-08-16 16:31:44,665 P8264 INFO Evaluating test data.
+2024-08-16 16:31:46,101 P8264 INFO Finish inference [1.42s]
+2024-08-16 16:31:50,063 P8264 INFO {'f1': '0.8914', 'rc': '0.9225', 'pc': '0.8623', 'prc': '0.9468', 'roc': '0.9940', 'apc': '0.9471', 'acc': '0.9769', 'mcc': '0.8791'}
+2024-08-16 16:31:50,063 P8264 INFO {'best anomaly ratio setting: 0.105'}
+2024-08-16 16:31:50,065 P8264 INFO Saving model to ./experiment_records\b69e9392\model.ckpt
+2024-08-16 16:32:03,869 P8264 INFO Epoch 3/100, training loss: 0.00712 [13.78s]
+2024-08-16 16:32:03,870 P8264 INFO Evaluating test data.
+2024-08-16 16:32:05,411 P8264 INFO Finish inference [1.52s]
+2024-08-16 16:32:09,275 P8264 INFO {'f1': '0.9139', 'rc': '0.9457', 'pc': '0.8841', 'prc': '0.9594', 'roc': '0.9959', 'apc': '0.9597', 'acc': '0.9817', 'mcc': '0.9043'}
+2024-08-16 16:32:09,275 P8264 INFO {'best anomaly ratio setting: 0.105'}
+2024-08-16 16:32:09,291 P8264 INFO Saving model to ./experiment_records\b69e9392\model.ckpt
+2024-08-16 16:32:23,070 P8264 INFO Epoch 4/100, training loss: 0.00549 [13.78s]
+2024-08-16 16:32:23,070 P8264 INFO Evaluating test data.
+2024-08-16 16:32:24,666 P8264 INFO Finish inference [1.58s]
+2024-08-16 16:32:28,534 P8264 INFO {'f1': '0.9490', 'rc': '0.9380', 'pc': '0.9603', 'prc': '0.9714', 'roc': '0.9975', 'apc': '0.9717', 'acc': '0.9896', 'mcc': '0.9433'}
+2024-08-16 16:32:28,534 P8264 INFO {'best anomaly ratio setting: 0.095'}
+2024-08-16 16:32:28,551 P8264 INFO Saving model to ./experiment_records\b69e9392\model.ckpt
+2024-08-16 16:32:42,016 P8264 INFO Epoch 5/100, training loss: 0.00423 [13.46s]
+2024-08-16 16:32:42,016 P8264 INFO Evaluating test data.
+2024-08-16 16:32:43,569 P8264 INFO Finish inference [1.54s]
+2024-08-16 16:32:47,465 P8264 INFO {'f1': '0.9647', 'rc': '0.9535', 'pc': '0.9762', 'prc': '0.9792', 'roc': '0.9983', 'apc': '0.9793', 'acc': '0.9928', 'mcc': '0.9608'}
+2024-08-16 16:32:47,466 P8264 INFO {'best anomaly ratio setting: 0.095'}
+2024-08-16 16:32:47,467 P8264 INFO Saving model to ./experiment_records\b69e9392\model.ckpt
+2024-08-16 16:33:01,466 P8264 INFO Epoch 6/100, training loss: 0.00621 [13.98s]
+2024-08-16 16:33:01,466 P8264 INFO Evaluating test data.
+2024-08-16 16:33:02,866 P8264 INFO Finish inference [1.40s]
+2024-08-16 16:33:06,748 P8264 INFO {'f1': '0.9569', 'rc': '0.9457', 'pc': '0.9683', 'prc': '0.9756', 'roc': '0.9979', 'apc': '0.9758', 'acc': '0.9912', 'mcc': '0.9521'}
+2024-08-16 16:33:06,748 P8264 INFO {'best anomaly ratio setting: 0.095'}
+2024-08-16 16:33:06,749 P8264 INFO 19 epoches left before early stop
+2024-08-16 16:33:20,404 P8264 INFO Epoch 7/100, training loss: 0.00456 [13.64s]
+2024-08-16 16:33:20,405 P8264 INFO Evaluating test data.
+2024-08-16 16:33:21,901 P8264 INFO Finish inference [1.48s]
+2024-08-16 16:33:25,885 P8264 INFO {'f1': '0.9438', 'rc': '0.9767', 'pc': '0.9130', 'prc': '0.9656', 'roc': '0.9971', 'apc': '0.9659', 'acc': '0.9880', 'mcc': '0.9378'}
+2024-08-16 16:33:25,885 P8264 INFO {'best anomaly ratio setting: 0.105'}
+2024-08-16 16:33:25,887 P8264 INFO 18 epoches left before early stop
+2024-08-16 16:33:39,774 P8264 INFO Epoch 8/100, training loss: 0.00254 [13.87s]
+2024-08-16 16:33:39,774 P8264 INFO Evaluating test data.
+2024-08-16 16:33:41,225 P8264 INFO Finish inference [1.44s]
+2024-08-16 16:33:45,109 P8264 INFO {'f1': '0.8764', 'rc': '0.9070', 'pc': '0.8478', 'prc': '0.9427', 'roc': '0.9935', 'apc': '0.9432', 'acc': '0.9737', 'mcc': '0.8623'}
+2024-08-16 16:33:45,109 P8264 INFO {'best anomaly ratio setting: 0.105'}
+2024-08-16 16:33:45,125 P8264 INFO 17 epoches left before early stop
+2024-08-16 16:33:59,019 P8264 INFO Epoch 9/100, training loss: 0.00256 [13.89s]
+2024-08-16 16:33:59,019 P8264 INFO Evaluating test data.
+2024-08-16 16:34:00,683 P8264 INFO Finish inference [1.65s]
+2024-08-16 16:34:04,626 P8264 INFO {'f1': '0.8627', 'rc': '0.8527', 'pc': '0.8730', 'prc': '0.9334', 'roc': '0.9916', 'apc': '0.9339', 'acc': '0.9721', 'mcc': '0.8473'}
+2024-08-16 16:34:04,626 P8264 INFO {'best anomaly ratio setting: 0.095'}
+2024-08-16 16:34:04,642 P8264 INFO 16 epoches left before early stop
+2024-08-16 16:34:18,427 P8264 INFO Epoch 10/100, training loss: 0.00211 [13.78s]
+2024-08-16 16:34:18,427 P8264 INFO Evaluating test data.
+2024-08-16 16:34:19,876 P8264 INFO Finish inference [1.43s]
+2024-08-16 16:34:23,730 P8264 INFO {'f1': '0.7934', 'rc': '0.7442', 'pc': '0.8496', 'prc': '0.8889', 'roc': '0.9846', 'apc': '0.8895', 'acc': '0.9601', 'mcc': '0.7735'}
+2024-08-16 16:34:23,731 P8264 INFO {'best anomaly ratio setting: 0.086'}
+2024-08-16 16:34:23,746 P8264 INFO 15 epoches left before early stop
+2024-08-16 16:34:36,870 P8264 INFO Epoch 11/100, training loss: 0.00276 [13.12s]
+2024-08-16 16:34:36,871 P8264 INFO Evaluating test data.
+2024-08-16 16:34:38,353 P8264 INFO Finish inference [1.47s]
+2024-08-16 16:34:42,264 P8264 INFO {'f1': '0.7739', 'rc': '0.6899', 'pc': '0.8812', 'prc': '0.8592', 'roc': '0.9791', 'apc': '0.8598', 'acc': '0.9585', 'mcc': '0.7583'}
+2024-08-16 16:34:42,264 P8264 INFO {'best anomaly ratio setting: 0.075'}
+2024-08-16 16:34:42,280 P8264 INFO 14 epoches left before early stop
+2024-08-16 16:34:55,748 P8264 INFO Epoch 12/100, training loss: 0.00282 [13.47s]
+2024-08-16 16:34:55,748 P8264 INFO Evaluating test data.
+2024-08-16 16:34:57,257 P8264 INFO Finish inference [1.49s]
+2024-08-16 16:35:01,124 P8264 INFO {'f1': '0.7913', 'rc': '0.7054', 'pc': '0.9010', 'prc': '0.8806', 'roc': '0.9828', 'apc': '0.8812', 'acc': '0.9617', 'mcc': '0.7776'}
+2024-08-16 16:35:01,124 P8264 INFO {'best anomaly ratio setting: 0.075'}
+2024-08-16 16:35:01,126 P8264 INFO 13 epoches left before early stop
+2024-08-16 16:35:14,897 P8264 INFO Epoch 13/100, training loss: 0.00168 [13.77s]
+2024-08-16 16:35:14,897 P8264 INFO Evaluating test data.
+2024-08-16 16:35:16,424 P8264 INFO Finish inference [1.51s]
+2024-08-16 16:35:20,337 P8264 INFO {'f1': '0.7851', 'rc': '0.7364', 'pc': '0.8407', 'prc': '0.8687', 'roc': '0.9808', 'apc': '0.8694', 'acc': '0.9585', 'mcc': '0.7643'}
+2024-08-16 16:35:20,338 P8264 INFO {'best anomaly ratio setting: 0.086'}
+2024-08-16 16:35:20,339 P8264 INFO 12 epoches left before early stop
+2024-08-16 16:35:34,213 P8264 INFO Epoch 14/100, training loss: 0.00307 [13.86s]
+2024-08-16 16:35:34,214 P8264 INFO Evaluating test data.
+2024-08-16 16:35:35,703 P8264 INFO Finish inference [1.47s]
+2024-08-16 16:35:39,599 P8264 INFO {'f1': '0.8182', 'rc': '0.7674', 'pc': '0.8761', 'prc': '0.8954', 'roc': '0.9850', 'apc': '0.8960', 'acc': '0.9649', 'mcc': '0.8010'}
+2024-08-16 16:35:39,599 P8264 INFO {'best anomaly ratio setting: 0.086'}
+2024-08-16 16:35:39,601 P8264 INFO 11 epoches left before early stop
+2024-08-16 16:35:53,442 P8264 INFO Epoch 15/100, training loss: 0.00185 [13.83s]
+2024-08-16 16:35:53,443 P8264 INFO Evaluating test data.
+2024-08-16 16:35:54,942 P8264 INFO Finish inference [1.48s]
+2024-08-16 16:35:58,800 P8264 INFO {'f1': '0.8264', 'rc': '0.7752', 'pc': '0.8850', 'prc': '0.9036', 'roc': '0.9857', 'apc': '0.9040', 'acc': '0.9665', 'mcc': '0.8102'}
+2024-08-16 16:35:58,800 P8264 INFO {'best anomaly ratio setting: 0.086'}
+2024-08-16 16:35:58,816 P8264 INFO 10 epoches left before early stop
+2024-08-16 16:36:12,614 P8264 INFO Epoch 16/100, training loss: 0.00116 [13.80s]
+2024-08-16 16:36:12,614 P8264 INFO Evaluating test data.
+2024-08-16 16:36:14,126 P8264 INFO Finish inference [1.50s]
+2024-08-16 16:36:18,007 P8264 INFO {'f1': '0.8689', 'rc': '0.8992', 'pc': '0.8406', 'prc': '0.9402', 'roc': '0.9930', 'apc': '0.9407', 'acc': '0.9721', 'mcc': '0.8539'}
+2024-08-16 16:36:18,007 P8264 INFO {'best anomaly ratio setting: 0.105'}
+2024-08-16 16:36:18,009 P8264 INFO 9 epoches left before early stop
+2024-08-16 16:36:31,456 P8264 INFO Epoch 17/100, training loss: 0.00124 [13.45s]
+2024-08-16 16:36:31,456 P8264 INFO Evaluating test data.
+2024-08-16 16:36:32,964 P8264 INFO Finish inference [1.49s]
+2024-08-16 16:36:36,878 P8264 INFO {'f1': '0.8512', 'rc': '0.7984', 'pc': '0.9115', 'prc': '0.9106', 'roc': '0.9878', 'apc': '0.9114', 'acc': '0.9713', 'mcc': '0.8377'}
+2024-08-16 16:36:36,879 P8264 INFO {'best anomaly ratio setting: 0.086'}
+2024-08-16 16:36:36,881 P8264 INFO 8 epoches left before early stop
+2024-08-16 16:36:50,592 P8264 INFO Epoch 18/100, training loss: 0.00094 [13.70s]
+2024-08-16 16:36:50,592 P8264 INFO Evaluating test data.
+2024-08-16 16:36:52,129 P8264 INFO Finish inference [1.52s]
+2024-08-16 16:36:56,041 P8264 INFO {'f1': '0.7913', 'rc': '0.7054', 'pc': '0.9010', 'prc': '0.8710', 'roc': '0.9815', 'apc': '0.8718', 'acc': '0.9617', 'mcc': '0.7776'}
+2024-08-16 16:36:56,042 P8264 INFO {'best anomaly ratio setting: 0.075'}
+2024-08-16 16:36:56,043 P8264 INFO 7 epoches left before early stop
+2024-08-16 16:37:09,816 P8264 INFO Epoch 19/100, training loss: 0.00119 [13.76s]
+2024-08-16 16:37:09,816 P8264 INFO Evaluating test data.
+2024-08-16 16:37:11,315 P8264 INFO Finish inference [1.48s]
+2024-08-16 16:37:15,168 P8264 INFO {'f1': '0.8989', 'rc': '0.9302', 'pc': '0.8696', 'prc': '0.9482', 'roc': '0.9938', 'apc': '0.9486', 'acc': '0.9785', 'mcc': '0.8875'}
+2024-08-16 16:37:15,169 P8264 INFO {'best anomaly ratio setting: 0.105'}
+2024-08-16 16:37:15,170 P8264 INFO 6 epoches left before early stop
+2024-08-16 16:37:29,087 P8264 INFO Epoch 20/100, training loss: 0.00088 [13.90s]
+2024-08-16 16:37:29,088 P8264 INFO Evaluating test data.
+2024-08-16 16:37:30,611 P8264 INFO Finish inference [1.51s]
+2024-08-16 16:37:34,497 P8264 INFO {'f1': '0.8512', 'rc': '0.7984', 'pc': '0.9115', 'prc': '0.9022', 'roc': '0.9862', 'apc': '0.9030', 'acc': '0.9713', 'mcc': '0.8377'}
+2024-08-16 16:37:34,498 P8264 INFO {'best anomaly ratio setting: 0.086'}
+2024-08-16 16:37:34,500 P8264 INFO 5 epoches left before early stop
+2024-08-16 16:37:48,292 P8264 INFO Epoch 21/100, training loss: 0.00083 [13.78s]
+2024-08-16 16:37:48,292 P8264 INFO Evaluating test data.
+2024-08-16 16:37:49,795 P8264 INFO Finish inference [1.49s]
+2024-08-16 16:37:53,661 P8264 INFO {'f1': '0.7636', 'rc': '0.9767', 'pc': '0.6269', 'prc': '0.8310', 'roc': '0.9754', 'apc': '0.8319', 'acc': '0.9378', 'mcc': '0.7536'}
+2024-08-16 16:37:53,662 P8264 INFO {'best anomaly ratio setting: 0.155'}
+2024-08-16 16:37:53,664 P8264 INFO 4 epoches left before early stop
+2024-08-16 16:38:07,654 P8264 INFO Epoch 22/100, training loss: 0.00080 [13.98s]
+2024-08-16 16:38:07,654 P8264 INFO Evaluating test data.
+2024-08-16 16:38:09,162 P8264 INFO Finish inference [1.49s]
+2024-08-16 16:38:13,090 P8264 INFO {'f1': '0.8000', 'rc': '0.7132', 'pc': '0.9109', 'prc': '0.8869', 'roc': '0.9838', 'apc': '0.8876', 'acc': '0.9633', 'mcc': '0.7872'}
+2024-08-16 16:38:13,090 P8264 INFO {'best anomaly ratio setting: 0.075'}
+2024-08-16 16:38:13,092 P8264 INFO 3 epoches left before early stop
+2024-08-16 16:38:26,681 P8264 INFO Epoch 23/100, training loss: 0.00156 [13.58s]
+2024-08-16 16:38:26,681 P8264 INFO Evaluating test data.
+2024-08-16 16:38:28,331 P8264 INFO Finish inference [1.64s]
+2024-08-16 16:38:32,221 P8264 INFO {'f1': '0.7636', 'rc': '0.9767', 'pc': '0.6269', 'prc': '0.8691', 'roc': '0.9810', 'apc': '0.8697', 'acc': '0.9378', 'mcc': '0.7536'}
+2024-08-16 16:38:32,221 P8264 INFO {'best anomaly ratio setting: 0.155'}
+2024-08-16 16:38:32,223 P8264 INFO 2 epoches left before early stop
+2024-08-16 16:38:45,757 P8264 INFO Epoch 24/100, training loss: 0.00041 [13.52s]
+2024-08-16 16:38:45,757 P8264 INFO Evaluating test data.
+2024-08-16 16:38:47,264 P8264 INFO Finish inference [1.49s]
+2024-08-16 16:38:51,164 P8264 INFO {'f1': '0.8264', 'rc': '0.7752', 'pc': '0.8850', 'prc': '0.8970', 'roc': '0.9850', 'apc': '0.8976', 'acc': '0.9665', 'mcc': '0.8102'}
+2024-08-16 16:38:51,165 P8264 INFO {'best anomaly ratio setting: 0.086'}
+2024-08-16 16:38:51,166 P8264 INFO 1 epoches left before early stop
+2024-08-16 16:39:04,884 P8264 INFO Epoch 25/100, training loss: 0.00032 [13.70s]
+2024-08-16 16:39:04,884 P8264 INFO Evaluating test data.
+2024-08-16 16:39:06,424 P8264 INFO Finish inference [1.53s]
+2024-08-16 16:39:10,344 P8264 INFO {'f1': '0.8678', 'rc': '0.8140', 'pc': '0.9292', 'prc': '0.9165', 'roc': '0.9880', 'apc': '0.9171', 'acc': '0.9745', 'mcc': '0.8560'}
+2024-08-16 16:39:10,344 P8264 INFO {'best anomaly ratio setting: 0.086'}
+2024-08-16 16:39:10,346 P8264 INFO 0 epoches left before early stop
+2024-08-16 16:39:10,358 P8264 INFO Early stop at epoch: 25
