@@ -12,7 +12,6 @@ We evaluate ALogSCAN on benchmark datasets (HDFS, BGL, and ERDC), showing superi
 - Dynamic Frequency-based Log Filtering (DFLF)
 - Dual-network architecture: AE & EO
 - Self-supervised learning, no labels required
-- 
 
 ---
 
@@ -48,5 +47,5 @@ For generating the data files, please refer to the implementation repo of [deep-
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/ALogSCAN.git
+   git clone https://github.com/MahsaRz/ALogSCAN.git
    cd ALogSCAN
