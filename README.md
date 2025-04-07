@@ -4,7 +4,7 @@
 
 `ALogSCAN` is a self-supervised log anomaly detection framework designed for cloud environments. It leverages a **dual-network architecture** and a novel technique called **Dynamic Frequency-based Log Filtering (DFLF)** to effectively learn from normal patterns in unlabeled log data. 
 
-By separating learning into **AE (AutoEncoder)** and **EO (Event Order)** streams and applying frequency-based masking, ALogSCAN adapts to dynamic log distributions and achieves high detection performance with minimal supervision.
+By separating learning into **AE (AutoEncoder)** and **EO (Encoder Only)** streams and applying frequency-based masking, ALogSCAN adapts to dynamic log distributions and achieves high detection performance with minimal supervision.
 
 We evaluate ALogSCAN on benchmark datasets (HDFS, BGL, and ERDC), showing superior performance in terms of both accuracy and inference time.
 
