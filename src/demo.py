@@ -41,7 +41,7 @@ parser.add_argument("--decoder_type", default="deconv", type=str)
 parser.add_argument("--pooling_mode", default="max", type=str, choices=["max", "mean"])
 
 # Dataset params
-parser.add_argument("--datasets", nargs="+", default=['bgl'], choices=['hdfs', 'bgl', 'erdc'], help='The datasets')
+parser.add_argument("--datasets", nargs="+", default=['bgl'], choices=['hdfs', 'bgl', 'spirit'], help='The datasets')
 parser.add_argument("--data_dir", default="../data/processed/", type=str)
 parser.add_argument("--session_size", nargs="+", default=[100], type=int, help='The target detection size')
 parser.add_argument("--window_size", default=100, choices=[100, 60, 20], type=int, help='The actual decomposed size')
